@@ -1,0 +1,46 @@
+[
+    {
+        "value": "pending",
+        "synonyms": [
+            "pending",
+            "waiting",
+            "not confirmed",
+            "awaiting"
+        ]
+    },
+    {
+        "value": "accepted",
+        "synonyms": [
+            "accepted",
+            "confirmed",
+            "approved"
+        ]
+    },
+    {
+        "value": "in progress",
+        "synonyms": [
+            "in progress",
+            "ongoing",
+            "being worked on",
+            "started"
+        ]
+    },
+    {
+        "value": "completed",
+        "synonyms": [
+            "completed",
+            "done",
+            "finished",
+            "ready"
+        ]
+    },
+    {
+        "value": "cancelled",
+        "synonyms": [
+            "cancelled",
+            "canceled",
+            "removed",
+            "terminated"
+        ]
+    }
+]

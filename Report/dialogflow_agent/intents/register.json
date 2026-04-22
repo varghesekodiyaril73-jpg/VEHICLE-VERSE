@@ -1,0 +1,33 @@
+{
+  "id": "ed80ce3b-870b-4043-ac4d-b5240c33a97b",
+  "name": "register",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "register",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": [
+            "Welcome to VehicleVerse! 🎉\n\nTo create an account, visit our Registration page.\n\nYou can register as:\n• **Customer** - Book services, track bookings, manage vehicles\n• **Mechanic** - Apply to join our verified mechanic network\n\n**What you'll need:**\n• Valid email address\n• Phone number\n• Basic personal details\n\nMechanics will need additional verification documents."
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

@@ -1,0 +1,33 @@
+{
+  "id": "ea575d30-abe6-4745-a194-1574debddf7e",
+  "name": "service.pricing",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "service.pricing",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": [
+            "Our pricing varies based on service type and vehicle. Here's a general guide: 💰\n\n**Regular Services:**\n• Basic Service: ₹500 - ₹1,500\n• Full Service: ₹1,500 - ₹3,000\n• Oil Change: ₹300 - ₹800\n\n**Emergency Breakdown:**\n• Roadside Assistance: ₹800 - ₹2,000\n• Towing: Based on distance\n\nExact pricing is shown when you book. Mechanics may also provide custom quotes after diagnosis."
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

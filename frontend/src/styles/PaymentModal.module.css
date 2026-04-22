@@ -1,0 +1,499 @@
+/* Payment Modal Styles - Matching provided template */
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 1000;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.modal {
+    width: 100%;
+    max-width: 480px;
+    max-height: calc(100vh - 40px);
+    background: #0a0a0f;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.closeBtn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.7);
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.closeBtn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+/* Processing/Success Overlay */
+.processingOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(10, 10, 15, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.processingContent,
+.successContent {
+    text-align: center;
+    color: white;
+}
+
+.processingContent h3,
+.successContent h3 {
+    font-size: 1.5rem;
+    margin: 1rem 0 0.5rem;
+    font-weight: 600;
+}
+
+.processingContent p,
+.successContent p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+}
+
+.spinner {
+    color: #6366f1;
+}
+
+.successIcon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #10b981, #059669);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    color: white;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+    color: white;
+    padding: 28px 24px;
+    text-align: center;
+}
+
+.headerIcon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 12px;
+}
+
+.header h2 {
+    font-weight: 600;
+    font-size: 1.4rem;
+    margin-bottom: 4px;
+}
+
+.header p {
+    opacity: 0.9;
+    font-size: 0.9rem;
+}
+
+/* Body */
+.body {
+    padding: 24px;
+    overflow-y: auto;
+    flex: 1;
+    max-height: calc(100vh - 300px);
+}
+
+/* Method Tabs */
+.methodTabs {
+    display: flex;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 24px;
+}
+
+.methodTab {
+    flex: 1;
+    padding: 14px 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.5);
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.methodTab.active {
+    color: #6366f1;
+}
+
+.methodTab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #6366f1;
+}
+
+.methodTab:hover:not(.active) {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Card Preview */
+.cardPreview {
+    height: 160px;
+    min-height: 160px;
+    background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+    border-radius: 16px;
+    padding: 16px;
+    color: white;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+}
+
+.cardChip {
+    width: 45px;
+    height: 32px;
+    background: linear-gradient(135deg, #ffd700, #f59e0b);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chipLines {
+    width: 30px;
+    height: 20px;
+    background: repeating-linear-gradient(90deg,
+            rgba(0, 0, 0, 0.1),
+            rgba(0, 0, 0, 0.1) 3px,
+            transparent 3px,
+            transparent 5px);
+}
+
+.cardNumber {
+    font-size: 1.25rem;
+    letter-spacing: 3px;
+    font-family: 'Courier New', monospace;
+    margin: 15px 0;
+}
+
+.cardDetails {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+}
+
+.cardName,
+.cardExpiry {
+    opacity: 0.9;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Form Styles */
+.formGroup {
+    margin-bottom: 18px;
+}
+
+.formLabel {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 8px;
+}
+
+.formControl {
+    width: 100%;
+    padding: 14px 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    font-size: 1rem;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.formControl:focus {
+    outline: none;
+    border-color: #6366f1;
+    background: rgba(99, 102, 241, 0.1);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.formControl::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.formRow {
+    display: flex;
+    gap: 16px;
+}
+
+.formRow .formGroup {
+    flex: 1;
+}
+
+/* UPI Styles */
+.upiApps {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    gap: 10px;
+}
+
+.upiApp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    padding: 12px;
+    border-radius: 12px;
+    transition: all 0.2s ease;
+    flex: 1;
+}
+
+.upiApp:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.upiAppIcon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.upiApp span {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.gpay {
+    background: #4285f4;
+}
+
+.phonepe {
+    background: #5f259f;
+}
+
+.paytm {
+    background: #00baf2;
+}
+
+.amazon {
+    background: #ff9900;
+}
+
+/* Amount Section */
+.amountSection {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 18px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.amountLabel {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 8px;
+}
+
+.amountValue {
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+}
+
+.amountInput {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.currencySymbol {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+}
+
+.amountField {
+    width: 120px;
+    font-size: 2rem;
+    font-weight: 700;
+    background: transparent;
+    border: none;
+    color: white;
+    text-align: center;
+    outline: none;
+}
+
+.amountField::-webkit-outer-spin-button,
+.amountField::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.minNote {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.4);
+    margin-top: 8px;
+}
+
+/* Pay Button */
+.payButton {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.payButton:hover {
+    box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
+}
+
+.payButton:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* Security Note */
+.securityNote {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 16px;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.securityNote svg {
+    color: #10b981;
+}
+
+/* Footer */
+.footer {
+    padding: 16px 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cardIcon {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.4);
+    padding: 4px 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .modal {
+        border-radius: 16px;
+    }
+
+    .formRow {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .upiApps {
+        flex-wrap: wrap;
+    }
+
+    .upiApp {
+        width: calc(50% - 5px);
+    }
+}
+
+/* ── Validation Error Styles ── */
+
+.formControlError {
+    border-color: rgba(239, 68, 68, 0.5) !important;
+    background: rgba(239, 68, 68, 0.05) !important;
+}
+
+.formControlError:focus {
+    border-color: #ef4444 !important;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1) !important;
+}
+
+.fieldError {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #f87171;
+    font-size: 0.75rem;
+    margin-top: 6px;
+    padding-left: 2px;
+}

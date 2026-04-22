@@ -1,0 +1,820 @@
+/* ViewMechanics - Customer page to browse mechanics */
+
+/* Main Container */
+.container {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    background-color: #030712;
+    color: white;
+    overflow-x: hidden;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Background Effects */
+.backgroundEffects {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.glowBlob {
+    position: absolute;
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(20, 184, 166, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+    border-radius: 50%;
+    filter: blur(80px);
+    animation: float 20s infinite ease-in-out;
+}
+
+.blob1 {
+    top: -20%;
+    left: -10%;
+    animation-delay: 0s;
+}
+
+.blob2 {
+    bottom: -20%;
+    right: -10%;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+    animation-delay: -5s;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(30px, 50px);
+    }
+}
+
+/* Page Header */
+.pageHeader {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: 3rem 2rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.pageTagline {
+    display: inline-block;
+    background: linear-gradient(135deg, rgba(45, 212, 191, 0.1), rgba(59, 130, 246, 0.1));
+    border: 1px solid rgba(45, 212, 191, 0.2);
+    padding: 0.5rem 1.25rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    color: #2dd4bf;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.05em;
+}
+
+.pageTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.pageSubtitle {
+    font-size: 1.1rem;
+    color: #9ca3af;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Filter Tabs */
+.filterBar {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 0 2rem;
+    margin-bottom: 2rem;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.filterTab {
+    padding: 0.75rem 1.5rem;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.03);
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filterTab:hover {
+    border-color: rgba(45, 212, 191, 0.3);
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.filterTabActive {
+    background: rgba(45, 212, 191, 0.15);
+    border-color: rgba(45, 212, 191, 0.3);
+    color: #2dd4bf;
+}
+
+/* Mechanics Grid */
+.mechanicsSection {
+    position: relative;
+    z-index: 10;
+    padding: 0 2rem 4rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.mechanicsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+/* Mechanic Card */
+.mechanicCard {
+    background: rgba(17, 24, 39, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 24px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: all 0.4s ease;
+}
+
+.mechanicCard:hover {
+    transform: translateY(-8px);
+    border-color: rgba(45, 212, 191, 0.5);
+    box-shadow: 0 10px 40px rgba(45, 212, 191, 0.1);
+    background: rgba(17, 24, 39, 0.8);
+}
+
+.mechanicHeader {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+.mechanicAvatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.mechanicAvatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mechanicInfo {
+    flex: 1;
+}
+
+.mechanicName {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: white;
+    margin: 0 0 0.25rem;
+}
+
+.mechanicLocation {
+    font-size: 0.85rem;
+    color: #6b7280;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.statusBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.35rem 0.85rem;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.statusAvailable {
+    background: rgba(34, 197, 94, 0.15);
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    color: #22c55e;
+}
+
+.statusBusy {
+    background: rgba(107, 114, 128, 0.15);
+    border: 1px solid rgba(107, 114, 128, 0.3);
+    color: #6b7280;
+}
+
+.statusDot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: currentColor;
+}
+
+/* Mechanic Details */
+.mechanicDetails {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 12px;
+}
+
+.detailItem {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.detailLabel {
+    font-size: 0.75rem;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.detailValue {
+    font-size: 0.95rem;
+    color: #2dd4bf;
+    font-weight: 600;
+}
+
+.ratingValue {
+    color: #fbbf24;
+}
+
+/* Card Actions */
+.cardActions {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.bookBtn {
+    flex: 1;
+    padding: 0.85rem 1rem;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    background: linear-gradient(90deg, #14b8a6 0%, #059669 100%);
+    border: none;
+    color: white;
+}
+
+.bookBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 25px rgba(20, 184, 166, 0.3);
+}
+
+.viewBtn {
+    flex: 1;
+    padding: 0.85rem 1rem;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #9ca3af;
+}
+
+.viewBtn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+/* Loading and Empty States */
+.loadingState {
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(45, 212, 191, 0.2);
+    border-top-color: #2dd4bf;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 1rem;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loadingState p,
+.emptyState p {
+    color: #6b7280;
+    font-size: 1rem;
+}
+
+.emptyState {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: rgba(17, 24, 39, 0.4);
+    border: 2px dashed rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+}
+
+.emptyIcon {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    color: #4b5563;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+}
+
+.emptyTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 0.75rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .mechanicsGrid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .pageTitle {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .mechanicsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .filterBar {
+        flex-wrap: wrap;
+    }
+
+    .pageTitle {
+        font-size: 1.75rem;
+    }
+
+    .mechanicDetails {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ── Manufacturer Partner Badge ── */
+.manufacturerBadge {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    background: linear-gradient(135deg, rgba(251, 191, 36, 0.08), rgba(45, 212, 191, 0.08));
+    border: 1px solid rgba(251, 191, 36, 0.25);
+    border-radius: 10px;
+    padding: 0.55rem 0.85rem;
+    font-size: 0.8rem;
+    color: #fbbf24;
+    margin-bottom: 0.85rem;
+}
+.manufacturerBadge strong {
+    color: #fde68a;
+}
+.centreLoc {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    color: #9ca3af;
+    font-size: 0.75rem;
+    margin-left: auto;
+}
+
+/* ── Manufacturer Search Bar ── */
+.searchSection {
+    position: relative;
+    z-index: 10;
+    max-width: 600px;
+    margin: 0 auto 1.5rem;
+    padding: 0 2rem;
+}
+.searchWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.searchIcon {
+    position: absolute;
+    left: 1rem;
+    color: #6b7280;
+    pointer-events: none;
+}
+.searchInput {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 14px;
+    padding: 0.85rem 3rem 0.85rem 2.75rem;
+    color: white;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+.searchInput::placeholder { color: #6b7280; }
+.searchInput:focus {
+    outline: none;
+    border-color: #fbbf24;
+    background: rgba(251, 191, 36, 0.06);
+    box-shadow: 0 0 20px rgba(251, 191, 36, 0.12);
+}
+.searchClear {
+    position: absolute;
+    right: 0.85rem;
+    background: none;
+    border: none;
+    color: #6b7280;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    transition: color 0.2s;
+}
+.searchClear:hover { color: white; }
+.searchResultsNote {
+    text-align: center;
+    font-size: 0.82rem;
+    color: #9ca3af;
+    margin-top: 0.6rem;
+}
+
+/* ── Book Service Modal ── */
+.modalOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 1rem;
+}
+.modal {
+    background: #0f172a;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    width: 100%;
+    max-width: 560px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.6);
+}
+.modalHeader {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1.75rem 1.75rem 0;
+}
+.modalTag {
+    font-size: 0.75rem;
+    color: #2dd4bf;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.3rem;
+}
+.modalTitle {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+}
+.modalClose {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px;
+    color: #9ca3af;
+    cursor: pointer;
+    padding: 0.4rem;
+    display: flex;
+    align-items: center;
+    transition: all 0.2s;
+    flex-shrink: 0;
+    margin-left: 1rem;
+}
+.modalClose:hover { background: rgba(255,255,255,0.15); color: white; }
+
+/* Step Indicator */
+.stepIndicator {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1.25rem 1.75rem 0;
+    align-items: center;
+}
+.stepItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+    flex: 1;
+    position: relative;
+}
+.stepItem:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 14px;
+    left: calc(50% + 14px);
+    right: calc(-50% + 14px);
+    height: 1px;
+    background: rgba(255,255,255,0.1);
+    z-index: 0;
+}
+.stepDot {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(255,255,255,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    color: #6b7280;
+    font-weight: 600;
+    background: rgba(255,255,255,0.03);
+    z-index: 1;
+    transition: all 0.3s;
+}
+.stepCurrent {
+    border-color: #2dd4bf;
+    color: #2dd4bf;
+    background: rgba(45,212,191,0.1);
+    box-shadow: 0 0 14px rgba(45,212,191,0.25);
+}
+.stepDone {
+    background: #14b8a6;
+    border-color: #14b8a6;
+    color: white;
+}
+.stepLabel {
+    font-size: 0.68rem;
+    color: #6b7280;
+    white-space: nowrap;
+}
+
+/* Modal Error */
+.modalError {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(239,68,68,0.12);
+    border: 1px solid rgba(239,68,68,0.25);
+    color: #f87171;
+    font-size: 0.85rem;
+    padding: 0.65rem 1rem;
+    border-radius: 10px;
+    margin: 1rem 1.75rem 0;
+}
+
+/* Modal Body */
+.modalBody { padding: 1.25rem 1.75rem 1.75rem; }
+.stepTitle {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 0.25rem;
+}
+.stepDesc {
+    color: #6b7280;
+    font-size: 0.85rem;
+    margin: 0 0 1.25rem;
+}
+
+/* Vehicle list */
+.modalLoading {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #9ca3af;
+    padding: 2rem 0;
+    justify-content: center;
+}
+.noVehicles {
+    text-align: center;
+    color: #6b7280;
+    padding: 2rem 0;
+}
+.noVehicles svg { margin: 0 auto 0.75rem; display: block; opacity: 0.5; }
+.addVehicleBtn {
+    margin-top: 1rem;
+    background: linear-gradient(90deg, #14b8a6, #059669);
+    border: none;
+    color: white;
+    padding: 0.6rem 1.25rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+.vehicleList { display: flex; flex-direction: column; gap: 0.65rem; margin-bottom: 1.25rem; }
+.vehicleOption {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: rgba(255,255,255,0.03);
+    border: 1.5px solid rgba(255,255,255,0.08);
+    border-radius: 14px;
+    padding: 0.85rem 1rem;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.25s;
+    width: 100%;
+}
+.vehicleOption:hover { border-color: rgba(45,212,191,0.35); background: rgba(45,212,191,0.05); }
+.vehicleOptionSelected {
+    border-color: #14b8a6 !important;
+    background: rgba(20,184,166,0.1) !important;
+}
+.vehicleOptionIcon {
+    width: 40px; height: 40px;
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center; color: white; flex-shrink: 0;
+}
+.vehicleOptionInfo { flex: 1; }
+.vehicleOptionName { display: block; font-weight: 600; color: white; font-size: 0.9rem; }
+.vehicleOptionSub { font-size: 0.78rem; color: #9ca3af; }
+.vehicleCheck { color: #14b8a6; flex-shrink: 0; }
+
+/* Details form */
+.detailsForm { display: flex; flex-direction: column; gap: 1rem; }
+.formRow { display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem; }
+.formGroup { display: flex; flex-direction: column; gap: 0.4rem; }
+.formLabel { font-size: 0.8rem; color: #9ca3af; display: flex; align-items: center; gap: 0.35rem; font-weight: 500; }
+.formInput {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px;
+    padding: 0.7rem 0.9rem;
+    color: white;
+    font-size: 0.88rem;
+    transition: all 0.25s;
+    font-family: inherit;
+}
+.formInput::placeholder { color: #4b5563; }
+.formInput:focus { outline: none; border-color: #2dd4bf; background: rgba(45,212,191,0.05); }
+.formTextarea {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px;
+    padding: 0.7rem 0.9rem;
+    color: white;
+    font-size: 0.88rem;
+    resize: vertical;
+    font-family: inherit;
+    transition: all 0.25s;
+}
+.formTextarea::placeholder { color: #4b5563; }
+.formTextarea:focus { outline: none; border-color: #2dd4bf; background: rgba(45,212,191,0.05); }
+.categoryGrid { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.catBtn {
+    padding: 0.45rem 0.9rem;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    border: 1px solid rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.03);
+    color: #9ca3af;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.catBtn:hover { border-color: rgba(45,212,191,0.35); color: #2dd4bf; }
+.catBtnActive { background: rgba(45,212,191,0.15) !important; border-color: #2dd4bf !important; color: #2dd4bf !important; }
+
+/* Calendar */
+.calendarCard {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 14px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+.calHeader { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.85rem; }
+.calMonthLabel { font-weight: 600; color: white; font-size: 0.92rem; }
+.calNavBtn { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: #9ca3af; cursor: pointer; padding: 0.3rem; display: flex; align-items: center; transition: all 0.2s; }
+.calNavBtn:hover { background: rgba(255,255,255,0.12); color: white; }
+.calNavBtn:disabled { opacity: 0.3; cursor: not-allowed; }
+.calDayNames { display: grid; grid-template-columns: repeat(7, 1fr); margin-bottom: 0.4rem; }
+.calDayName { text-align: center; font-size: 0.7rem; color: #6b7280; font-weight: 600; padding: 0.25rem 0; }
+.calGrid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 2px; }
+.calDay { width: 100%; aspect-ratio: 1; border: none; background: none; color: #d1d5db; font-size: 0.8rem; border-radius: 8px; cursor: pointer; transition: all 0.15s; }
+.calDay:hover:not(:disabled):not(.calDayEmpty) { background: rgba(45,212,191,0.15); color: #2dd4bf; }
+.calDayEmpty { background: none !important; cursor: default; }
+.calDayDisabled { opacity: 0.3; cursor: not-allowed !important; }
+.calDaySelected { background: #14b8a6 !important; color: white !important; font-weight: 700; }
+.calDayToday { border: 1.5px solid rgba(45,212,191,0.4); color: #2dd4bf; }
+.selectedDateDisplay { display: flex; align-items: center; gap: 0.4rem; color: #2dd4bf; font-size: 0.8rem; margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid rgba(255,255,255,0.06); }
+
+/* Time Picker */
+.timePickerCard { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 1rem; margin-bottom: 1.25rem; }
+.timeRow { display: flex; align-items: flex-end; gap: 0.75rem; margin-top: 0.5rem; }
+.timeCol { display: flex; flex-direction: column; gap: 0.3rem; }
+.timeColLabel { font-size: 0.72rem; color: #6b7280; font-weight: 500; }
+.timeSelect { background: #1a1f2e; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 0.5rem 0.6rem; color: white; font-size: 0.88rem; cursor: pointer; }
+.timeSelect option { background: #1a1f2e; color: #e5e7eb; }
+.timeColon { color: white; font-size: 1.2rem; font-weight: 700; padding-bottom: 0.3rem; }
+.periodToggle { display: flex; border-radius: 8px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); }
+.periodBtn { padding: 0.5rem 0.8rem; background: rgba(255,255,255,0.03); border: none; color: #6b7280; font-size: 0.82rem; font-weight: 600; cursor: pointer; transition: all 0.2s; }
+.periodActive { background: #14b8a6 !important; color: white !important; }
+.timeDisplay { display: flex; align-items: center; gap: 0.4rem; color: #2dd4bf; font-size: 0.85rem; margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid rgba(255,255,255,0.06); font-weight: 600; }
+
+/* Review Card */
+.reviewCard { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 1rem; margin-bottom: 1rem; }
+.reviewRow { display: flex; align-items: flex-start; gap: 1rem; padding: 0.6rem 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+.reviewRow:last-child { border-bottom: none; }
+.reviewLabel { font-size: 0.75rem; color: #6b7280; text-transform: uppercase; letter-spacing: 0.04em; min-width: 70px; padding-top: 0.1rem; }
+.reviewValue { font-size: 0.9rem; color: white; font-weight: 500; flex: 1; }
+.paymentNote { display: flex; gap: 0.6rem; background: rgba(251,191,36,0.08); border: 1px solid rgba(251,191,36,0.2); border-radius: 10px; padding: 0.75rem 1rem; font-size: 0.82rem; color: #fbbf24; margin-bottom: 1.25rem; }
+.paymentNote p { margin: 0; line-height: 1.5; }
+
+/* Modal Action Buttons */
+.modalActions { display: flex; gap: 0.75rem; justify-content: flex-end; padding-top: 0.5rem; }
+.modalBackBtn {
+    display: flex; align-items: center; gap: 0.4rem;
+    padding: 0.7rem 1.2rem; border-radius: 10px;
+    background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+    color: #9ca3af; font-size: 0.88rem; font-weight: 600; cursor: pointer; transition: all 0.2s;
+}
+.modalBackBtn:hover { background: rgba(255,255,255,0.1); color: white; }
+.modalNextBtn {
+    display: flex; align-items: center; gap: 0.4rem;
+    padding: 0.7rem 1.4rem; border-radius: 10px;
+    background: linear-gradient(90deg, #14b8a6, #059669);
+    border: none; color: white; font-size: 0.88rem; font-weight: 600; cursor: pointer; transition: all 0.2s;
+}
+.modalNextBtn:hover:not(:disabled) { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(20,184,166,0.3); }
+.modalNextBtn:disabled { opacity: 0.5; cursor: not-allowed; }
+.submitBtn {
+    display: flex; align-items: center; gap: 0.4rem;
+    padding: 0.7rem 1.4rem; border-radius: 10px;
+    background: linear-gradient(90deg, #7c3aed, #4f46e5);
+    border: none; color: white; font-size: 0.88rem; font-weight: 600; cursor: pointer; transition: all 0.2s;
+}
+.submitBtn:hover:not(:disabled) { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(124,58,237,0.35); }
+.submitBtn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+/* Mini spinner inside buttons */
+.miniSpinner {
+    width: 14px; height: 14px;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    display: inline-block;
+}
+
+/* Success Content */
+.successContent { text-align: center; padding: 1.5rem 0; }
+.successIcon { color: #22c55e; display: flex; justify-content: center; margin-bottom: 1rem; }
+.successTitle { font-size: 1.4rem; font-weight: 700; color: white; margin: 0 0 0.5rem; }
+.successSub { color: #9ca3af; margin: 0 0 0.75rem; }
+.bookingRef { color: #2dd4bf; font-size: 1rem; font-weight: 600; margin: 0 0 0.5rem; }
+.successInfo { font-size: 0.82rem; color: #6b7280; margin: 0; line-height: 1.5; }
+
+/* bookBtn disabled state additional style */
+.bookBtn:disabled { opacity: 0.45; cursor: not-allowed; transform: none !important; box-shadow: none !important; }

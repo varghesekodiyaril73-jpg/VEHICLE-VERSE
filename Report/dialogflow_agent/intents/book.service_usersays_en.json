@@ -1,0 +1,171 @@
+[
+    {
+        "id": "bs-001",
+        "data": [
+            {
+                "text": "I want to book a service",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "en",
+        "updated": 0
+    },
+    {
+        "id": "bs-002",
+        "data": [
+            {
+                "text": "book service",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "en",
+        "updated": 0
+    },
+    {
+        "id": "bs-003",
+        "data": [
+            {
+                "text": "schedule maintenance",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "en",
+        "updated": 0
+    },
+    {
+        "id": "bs-004",
+        "data": [
+            {
+                "text": "I need car service",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "en",
+        "updated": 0
+    },
+    {
+        "id": "bs-005",
+        "data": [
+            {
+                "text": "book an appointment",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "en",
+        "updated": 0
+    },
+    {
+        "id": "bs-006",
+        "data": [
+            {
+                "text": "I want to get my vehicle serviced",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "en",
+        "updated": 0
+    },
+    {
+        "id": "bs-007",
+        "data": [
+            {
+                "text": "book a mechanic",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "en",
+        "updated": 0
+    },
+    {
+        "id": "bs-008",
+        "data": [
+            {
+                "text": "schedule a service",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "en",
+        "updated": 0
+    },
+    {
+        "id": "bs-009",
+        "data": [
+            {
+                "text": "need to service my car",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "en",
+        "updated": 0
+    },
+    {
+        "id": "bs-010",
+        "data": [
+            {
+                "text": "vehicle maintenance",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "en",
+        "updated": 0
+    },
+    {
+        "id": "bs-011",
+        "data": [
+            {
+                "text": "car service",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "en",
+        "updated": 0
+    },
+    {
+        "id": "bs-012",
+        "data": [
+            {
+                "text": "bike service",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "en",
+        "updated": 0
+    },
+    {
+        "id": "bs-013",
+        "data": [
+            {
+                "text": "service my vehicle",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "en",
+        "updated": 0
+    }
+]

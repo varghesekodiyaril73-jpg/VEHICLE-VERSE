@@ -1,0 +1,38 @@
+{
+  "id": "9114571e-b1b7-4c98-9b08-88c53ccc08f1",
+  "name": "book.service",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "book.service",
+      "affectedContexts": [
+        {
+          "name": "booking-context",
+          "lifespan": 5
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": [
+            "Great choice! 🔧 Would you like to book a:\n\n• **Regular Service** - Scheduled maintenance, oil change, etc.\n• **Emergency Breakdown** - Immediate assistance for breakdowns\n\nYou can also book directly at our Book Service page on your dashboard!"
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

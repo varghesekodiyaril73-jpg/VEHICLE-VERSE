@@ -1,0 +1,579 @@
+/* MyVehicles - Matches CustomerDashboard Design */
+
+/* Main Container */
+.container {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    background-color: #030712;
+    color: white;
+    overflow-x: hidden;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Background Effects */
+.backgroundEffects {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.glowBlob {
+    position: absolute;
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(20, 184, 166, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+    border-radius: 50%;
+    filter: blur(80px);
+    animation: float 20s infinite ease-in-out;
+}
+
+.blob1 {
+    top: -20%;
+    left: -10%;
+    animation-delay: 0s;
+}
+
+.blob2 {
+    bottom: -20%;
+    right: -10%;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+    animation-delay: -5s;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(30px, 50px);
+    }
+}
+
+/* Page Header */
+.pageHeader {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: 3rem 2rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.pageTagline {
+    display: inline-block;
+    background: linear-gradient(135deg, rgba(45, 212, 191, 0.1), rgba(59, 130, 246, 0.1));
+    border: 1px solid rgba(45, 212, 191, 0.2);
+    padding: 0.5rem 1.25rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    color: #2dd4bf;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.05em;
+}
+
+.pageTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.pageSubtitle {
+    font-size: 1.1rem;
+    color: #9ca3af;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Action Bar */
+.actionBar {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 2rem;
+    max-width: 1100px;
+    margin: 0 auto 2rem;
+}
+
+.addButton {
+    background: linear-gradient(90deg, #14b8a6 0%, #059669 100%);
+    color: white;
+    padding: 0.85rem 2rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    box-shadow: 0 0 30px rgba(20, 184, 166, 0.3);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.addButton:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 50px rgba(20, 184, 166, 0.5);
+}
+
+/* Vehicles Grid */
+.vehiclesSection {
+    position: relative;
+    z-index: 10;
+    padding: 0 2rem 4rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.vehiclesGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.vehicleCard {
+    background: rgba(17, 24, 39, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2.5rem;
+    border-radius: 24px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    min-height: 380px;
+}
+
+.vehicleCard:hover {
+    transform: translateY(-8px);
+    border-color: rgba(45, 212, 191, 0.5);
+    box-shadow: 0 10px 40px rgba(45, 212, 191, 0.1);
+    background: rgba(17, 24, 39, 0.8);
+}
+
+.vehicleHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.vehicleName {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+}
+
+.vehicleTypeBadge {
+    background: linear-gradient(135deg, rgba(45, 212, 191, 0.15), rgba(59, 130, 246, 0.15));
+    border: 1px solid rgba(45, 212, 191, 0.25);
+    color: #2dd4bf;
+    padding: 0.35rem 0.85rem;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.vehicleDetails {
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.vehicleInfo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #9ca3af;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.vehicleInfo svg {
+    color: #6b7280;
+}
+
+.vehicleNumber {
+    color: #6b7280;
+    font-size: 0.95rem;
+    font-family: 'Fira Code', 'Consolas', monospace;
+    margin-top: 0.75rem;
+}
+
+/* Service Booking Actions */
+.serviceActions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+}
+
+.serviceBtn {
+    width: 100%;
+    padding: 1rem 1.25rem;
+    border-radius: 14px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    transition: all 0.3s ease;
+}
+
+.emergencyBtn {
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.15), rgba(220, 38, 38, 0.25));
+    border: 1px solid rgba(239, 68, 68, 0.4);
+    color: #f87171;
+}
+
+.emergencyBtn:hover {
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.25), rgba(220, 38, 38, 0.35));
+    border-color: rgba(239, 68, 68, 0.6);
+    box-shadow: 0 0 25px rgba(239, 68, 68, 0.25);
+    transform: translateY(-2px);
+}
+
+.regularBtn {
+    background: linear-gradient(135deg, rgba(45, 212, 191, 0.15), rgba(59, 130, 246, 0.15));
+    border: 1px solid rgba(45, 212, 191, 0.35);
+    color: #2dd4bf;
+}
+
+.regularBtn:hover {
+    background: linear-gradient(135deg, rgba(45, 212, 191, 0.25), rgba(59, 130, 246, 0.25));
+    border-color: rgba(45, 212, 191, 0.5);
+    box-shadow: 0 0 25px rgba(45, 212, 191, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Edit/Delete Actions */
+.vehicleActions {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: auto;
+}
+
+.actionBtn {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #9ca3af;
+    padding: 0.7rem 1rem;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.actionBtn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.deleteBtn {
+    background: rgba(239, 68, 68, 0.08);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    color: #f87171;
+}
+
+.deleteBtn:hover {
+    background: rgba(239, 68, 68, 0.15);
+    box-shadow: 0 0 20px rgba(239, 68, 68, 0.15);
+}
+
+/* Empty State */
+.emptyState {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: rgba(17, 24, 39, 0.4);
+    border: 2px dashed rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+}
+
+.emptyIcon {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    color: #4b5563;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+}
+
+.emptyTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 0.75rem;
+}
+
+.emptyText {
+    color: #6b7280;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* Modal Overlay */
+.modalOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(8px);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.modal {
+    background: rgba(17, 24, 39, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 2rem;
+    max-width: 500px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modalHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.modalTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+}
+
+.closeButton {
+    background: none;
+    border: none;
+    color: #6b7280;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s ease;
+}
+
+.closeButton:hover {
+    color: white;
+}
+
+/* Form Styles */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.formLabel {
+    color: #9ca3af;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.formInput,
+.formSelect {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0.85rem 1rem;
+    border-radius: 12px;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.formInput:focus,
+.formSelect:focus {
+    border-color: rgba(45, 212, 191, 0.5);
+    box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.1);
+}
+
+.formInput::placeholder {
+    color: #4b5563;
+}
+
+.formSelect option {
+    background: #111827;
+    color: white;
+}
+
+.formRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.formActions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.cancelBtn {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 0.85rem 1.5rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cancelBtn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.submitBtn {
+    flex: 1;
+    background: linear-gradient(90deg, #14b8a6 0%, #059669 100%);
+    border: none;
+    color: white;
+    padding: 0.85rem 1.5rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submitBtn:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 30px rgba(20, 184, 166, 0.3);
+}
+
+.submitBtn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Confirm Modal */
+.confirmModal {
+    text-align: center;
+}
+
+.confirmText {
+    color: #9ca3af;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.confirmActions {
+    display: flex;
+    gap: 1rem;
+}
+
+.confirmDeleteBtn {
+    flex: 1;
+    background: linear-gradient(90deg, #ef4444 0%, #dc2626 100%);
+    border: none;
+    color: white;
+    padding: 0.85rem 1.5rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.confirmDeleteBtn:hover {
+    box-shadow: 0 0 30px rgba(239, 68, 68, 0.3);
+}
+
+/* Error message */
+.errorMessage {
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    color: #f87171;
+    padding: 1rem;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+/* Loading state */
+.loadingState {
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(45, 212, 191, 0.2);
+    border-top-color: #2dd4bf;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 1rem;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .vehiclesGrid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .pageTitle {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .vehiclesGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .formRow {
+        grid-template-columns: 1fr;
+    }
+
+    .pageTitle {
+        font-size: 1.75rem;
+    }
+
+    .modal {
+        padding: 1.5rem;
+    }
+}

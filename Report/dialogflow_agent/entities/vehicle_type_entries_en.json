@@ -1,0 +1,55 @@
+[
+    {
+        "value": "car",
+        "synonyms": [
+            "car",
+            "sedan",
+            "hatchback",
+            "automobile",
+            "four-wheeler"
+        ]
+    },
+    {
+        "value": "bike",
+        "synonyms": [
+            "bike",
+            "motorcycle",
+            "two-wheeler",
+            "motorbike"
+        ]
+    },
+    {
+        "value": "scooter",
+        "synonyms": [
+            "scooter",
+            "scooty",
+            "moped"
+        ]
+    },
+    {
+        "value": "SUV",
+        "synonyms": [
+            "SUV",
+            "sports utility vehicle",
+            "crossover"
+        ]
+    },
+    {
+        "value": "truck",
+        "synonyms": [
+            "truck",
+            "lorry",
+            "pickup",
+            "commercial vehicle"
+        ]
+    },
+    {
+        "value": "auto",
+        "synonyms": [
+            "auto",
+            "auto rickshaw",
+            "three-wheeler",
+            "tuk-tuk"
+        ]
+    }
+]

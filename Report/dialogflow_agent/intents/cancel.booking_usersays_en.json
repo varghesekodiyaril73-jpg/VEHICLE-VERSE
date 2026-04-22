@@ -1,0 +1,106 @@
+[
+    {
+        "id": "cb-001",
+        "data": [
+            {
+                "text": "cancel my booking",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "en",
+        "updated": 0
+    },
+    {
+        "id": "cb-002",
+        "data": [
+            {
+                "text": "I want to cancel",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "en",
+        "updated": 0
+    },
+    {
+        "id": "cb-003",
+        "data": [
+            {
+                "text": "cancel service",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "en",
+        "updated": 0
+    },
+    {
+        "id": "cb-004",
+        "data": [
+            {
+                "text": "remove my appointment",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "en",
+        "updated": 0
+    },
+    {
+        "id": "cb-005",
+        "data": [
+            {
+                "text": "cancel appointment",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "en",
+        "updated": 0
+    },
+    {
+        "id": "cb-006",
+        "data": [
+            {
+                "text": "how to cancel booking",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "en",
+        "updated": 0
+    },
+    {
+        "id": "cb-007",
+        "data": [
+            {
+                "text": "delete my booking",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "en",
+        "updated": 0
+    },
+    {
+        "id": "cb-008",
+        "data": [
+            {
+                "text": "i don't want the service anymore",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "en",
+        "updated": 0
+    }
+]

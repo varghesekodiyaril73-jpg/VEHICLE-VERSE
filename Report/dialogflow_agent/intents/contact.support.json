@@ -1,0 +1,33 @@
+{
+  "id": "222f2fc7-8946-46ae-a4e9-34497a027668",
+  "name": "contact.support",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "contact.support",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": [
+            "I'll help you connect with our support team! 📞\n\n**Contact Options:**\n• 📧 Email: support@vehicleverse.com\n• 📞 Phone: +91-XXXXXXXXXX\n• 💬 Raise a complaint from your Dashboard\n\n**Response Times:**\n• Email: Within 24 hours\n• Phone: 9 AM - 6 PM (Mon-Sat)\n• Emergency: 24/7 hotline available\n\nYou can also file a formal complaint through the 'My Complaints' section in your dashboard."
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

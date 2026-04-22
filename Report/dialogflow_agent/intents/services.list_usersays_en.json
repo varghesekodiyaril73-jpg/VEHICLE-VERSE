@@ -1,0 +1,119 @@
+[
+    {
+        "id": "sl-001",
+        "data": [
+            {
+                "text": "what services do you offer",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "en",
+        "updated": 0
+    },
+    {
+        "id": "sl-002",
+        "data": [
+            {
+                "text": "list services",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "en",
+        "updated": 0
+    },
+    {
+        "id": "sl-003",
+        "data": [
+            {
+                "text": "available services",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "en",
+        "updated": 0
+    },
+    {
+        "id": "sl-004",
+        "data": [
+            {
+                "text": "what can you do",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "en",
+        "updated": 0
+    },
+    {
+        "id": "sl-005",
+        "data": [
+            {
+                "text": "types of services",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "en",
+        "updated": 0
+    },
+    {
+        "id": "sl-006",
+        "data": [
+            {
+                "text": "what do you offer",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "en",
+        "updated": 0
+    },
+    {
+        "id": "sl-007",
+        "data": [
+            {
+                "text": "services available",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "en",
+        "updated": 0
+    },
+    {
+        "id": "sl-008",
+        "data": [
+            {
+                "text": "service options",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "en",
+        "updated": 0
+    },
+    {
+        "id": "sl-009",
+        "data": [
+            {
+                "text": "what repairs can you do",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "en",
+        "updated": 0
+    }
+]

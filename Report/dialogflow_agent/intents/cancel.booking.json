@@ -1,0 +1,33 @@
+{
+  "id": "d3ee1661-9e19-468b-afba-f026c68dea1e",
+  "name": "cancel.booking",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "cancel.booking",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": [
+            "To cancel a booking, please follow these steps:\n\n1. Go to your Dashboard\n2. Find 'My Bookings' section\n3. Locate the booking you want to cancel\n4. Click the 'Cancel' button\n\n⚠️ **Note:** Cancellation may not be available for bookings that are already in progress or completed.\n\nIf you're having trouble, please contact our support team."
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

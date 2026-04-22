@@ -1,0 +1,197 @@
+[
+    {
+        "id": "be-001",
+        "data": [
+            {
+                "text": "emergency",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "en",
+        "updated": 0
+    },
+    {
+        "id": "be-002",
+        "data": [
+            {
+                "text": "my car broke down",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "en",
+        "updated": 0
+    },
+    {
+        "id": "be-003",
+        "data": [
+            {
+                "text": "breakdown",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "en",
+        "updated": 0
+    },
+    {
+        "id": "be-004",
+        "data": [
+            {
+                "text": "stranded",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "en",
+        "updated": 0
+    },
+    {
+        "id": "be-005",
+        "data": [
+            {
+                "text": "vehicle not starting",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "en",
+        "updated": 0
+    },
+    {
+        "id": "be-006",
+        "data": [
+            {
+                "text": "urgent help needed",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "en",
+        "updated": 0
+    },
+    {
+        "id": "be-007",
+        "data": [
+            {
+                "text": "emergency breakdown",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "en",
+        "updated": 0
+    },
+    {
+        "id": "be-008",
+        "data": [
+            {
+                "text": "car won't start",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "en",
+        "updated": 0
+    },
+    {
+        "id": "be-009",
+        "data": [
+            {
+                "text": "stuck on the road",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "en",
+        "updated": 0
+    },
+    {
+        "id": "be-010",
+        "data": [
+            {
+                "text": "my vehicle broke down",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "en",
+        "updated": 0
+    },
+    {
+        "id": "be-011",
+        "data": [
+            {
+                "text": "need immediate help",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "en",
+        "updated": 0
+    },
+    {
+        "id": "be-012",
+        "data": [
+            {
+                "text": "roadside assistance",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "en",
+        "updated": 0
+    },
+    {
+        "id": "be-013",
+        "data": [
+            {
+                "text": "i'm stranded",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "en",
+        "updated": 0
+    },
+    {
+        "id": "be-014",
+        "data": [
+            {
+                "text": "help my car broke",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "en",
+        "updated": 0
+    },
+    {
+        "id": "be-015",
+        "data": [
+            {
+                "text": "flat tire emergency",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "en",
+        "updated": 0
+    }
+]

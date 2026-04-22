@@ -1,0 +1,145 @@
+[
+    {
+        "id": "cs-001",
+        "data": [
+            {
+                "text": "check my booking",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "en",
+        "updated": 0
+    },
+    {
+        "id": "cs-002",
+        "data": [
+            {
+                "text": "booking status",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "en",
+        "updated": 0
+    },
+    {
+        "id": "cs-003",
+        "data": [
+            {
+                "text": "where is my mechanic",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "en",
+        "updated": 0
+    },
+    {
+        "id": "cs-004",
+        "data": [
+            {
+                "text": "what's my booking status",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "en",
+        "updated": 0
+    },
+    {
+        "id": "cs-005",
+        "data": [
+            {
+                "text": "track my service",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "en",
+        "updated": 0
+    },
+    {
+        "id": "cs-006",
+        "data": [
+            {
+                "text": "is my car ready",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "en",
+        "updated": 0
+    },
+    {
+        "id": "cs-007",
+        "data": [
+            {
+                "text": "status of my booking",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "en",
+        "updated": 0
+    },
+    {
+        "id": "cs-008",
+        "data": [
+            {
+                "text": "when will mechanic arrive",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "en",
+        "updated": 0
+    },
+    {
+        "id": "cs-009",
+        "data": [
+            {
+                "text": "track my booking",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "en",
+        "updated": 0
+    },
+    {
+        "id": "cs-010",
+        "data": [
+            {
+                "text": "my bookings",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "en",
+        "updated": 0
+    },
+    {
+        "id": "cs-011",
+        "data": [
+            {
+                "text": "check service status",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "en",
+        "updated": 0
+    }
+]

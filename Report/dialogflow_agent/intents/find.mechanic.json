@@ -1,0 +1,33 @@
+{
+  "id": "b04f99bc-807d-432e-b439-d7b9e18a7e1e",
+  "name": "find.mechanic",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "find.mechanic",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": [
+            "You can browse all our verified mechanics on the Mechanics page! 👨‍🔧\n\nThere you can:\n• View mechanic profiles and ratings\n• Filter by specialization (cars, bikes, etc.)\n• Check their availability status\n• See their experience and certifications\n\nGo to: View Mechanics from your dashboard!"
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

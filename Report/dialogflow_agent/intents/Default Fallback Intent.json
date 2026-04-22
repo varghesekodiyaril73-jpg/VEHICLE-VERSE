@@ -1,0 +1,35 @@
+{
+  "id": "fb8380eb-e602-4433-b9a0-ffcd956ee801",
+  "name": "Default Fallback Intent",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "input.unknown",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": [
+            "I'm sorry, I didn't quite understand that. I can help you with:\n\n• Booking a service\n• Checking booking status\n• Finding mechanics\n• Service pricing\n\nPlease try again or type 'help' for more options.",
+            "I'm not sure I understand. Could you rephrase that? You can ask me about booking services, finding mechanics, or checking your booking status.",
+            "Sorry, I didn't catch that. Try asking about our services, booking a mechanic, or checking your booking status."
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": true,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

@@ -1,0 +1,76 @@
+[
+    {
+        "value": "regular service",
+        "synonyms": [
+            "regular service",
+            "normal service",
+            "scheduled maintenance",
+            "routine service",
+            "general service"
+        ]
+    },
+    {
+        "value": "emergency breakdown",
+        "synonyms": [
+            "emergency breakdown",
+            "breakdown",
+            "emergency",
+            "roadside assistance",
+            "urgent service"
+        ]
+    },
+    {
+        "value": "oil change",
+        "synonyms": [
+            "oil change",
+            "change oil",
+            "oil replacement"
+        ]
+    },
+    {
+        "value": "tire repair",
+        "synonyms": [
+            "tire repair",
+            "flat tire",
+            "tire change",
+            "puncture repair",
+            "tyre repair"
+        ]
+    },
+    {
+        "value": "brake service",
+        "synonyms": [
+            "brake service",
+            "brake repair",
+            "brake check",
+            "brake inspection"
+        ]
+    },
+    {
+        "value": "engine repair",
+        "synonyms": [
+            "engine repair",
+            "engine service",
+            "engine check",
+            "engine problem"
+        ]
+    },
+    {
+        "value": "battery service",
+        "synonyms": [
+            "battery service",
+            "battery check",
+            "battery replacement",
+            "jumpstart"
+        ]
+    },
+    {
+        "value": "ac service",
+        "synonyms": [
+            "ac service",
+            "air conditioning",
+            "ac repair",
+            "cooling system"
+        ]
+    }
+]

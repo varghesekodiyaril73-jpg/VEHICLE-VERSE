@@ -1,0 +1,33 @@
+{
+  "id": "c411f302-3031-4c3b-a21f-216e2373249d",
+  "name": "help",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "help",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": [
+            "Here's everything I can help you with! 📋\n\n**Booking & Services:**\n• \"Book a service\" - Schedule maintenance\n• \"Emergency breakdown\" - Get immediate help\n• \"Check booking status\" - Track your bookings\n• \"Cancel booking\" - Cancel a scheduled service\n\n**Information:**\n• \"Find a mechanic\" - Browse available mechanics\n• \"Service pricing\" - View our rates\n• \"Available services\" - See what we offer\n• \"Working hours\" - Check our timings\n\n**Account:**\n• \"Register\" - Create a new account\n• \"Contact support\" - Get human assistance\n\nJust type any of these to get started!"
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

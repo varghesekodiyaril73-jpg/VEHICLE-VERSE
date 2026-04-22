@@ -1,0 +1,9 @@
+{
+    "id": "service-type-001",
+    "name": "service_type",
+    "isOverridable": true,
+    "isEnum": false,
+    "isRegexp": false,
+    "automatedExpansion": true,
+    "allowFuzzyExtraction": true
+}

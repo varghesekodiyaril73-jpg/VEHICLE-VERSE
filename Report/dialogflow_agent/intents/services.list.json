@@ -1,0 +1,33 @@
+{
+  "id": "918addd8-6835-4d5b-b279-1c442346a9b5",
+  "name": "services.list",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "services.list",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": [
+            "We offer a wide range of vehicle services! 🔧\n\n**Regular Services:**\n• Oil Change & Filter Replacement\n• Brake Inspection & Repair\n• Tire Rotation & Alignment\n• Engine Tune-up\n• AC Service & Repair\n• Battery Check & Replacement\n• General Maintenance\n\n**Emergency Breakdown Services:**\n• 24/7 Roadside Assistance\n• On-spot Repairs\n• Towing Service\n• Battery Jumpstart\n• Flat Tire Change\n• Fuel Delivery\n\nBook any of these from your dashboard!"
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

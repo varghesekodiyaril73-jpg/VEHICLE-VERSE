@@ -1,0 +1,33 @@
+{
+  "id": "fbe4b671-5433-4081-aaa3-bfd11ff8d3f8",
+  "name": "book.emergency",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "book.emergency",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": [
+            "I understand this is urgent! 🚨\n\nPlease go to our Emergency Booking page immediately to get help. A mechanic will be assigned to you as soon as possible!\n\nGo to: Book Service → Select Emergency Breakdown\n\nStay safe and help is on the way!"
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 600000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

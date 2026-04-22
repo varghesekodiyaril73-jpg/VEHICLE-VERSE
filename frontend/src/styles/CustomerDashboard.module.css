@@ -1,0 +1,599 @@
+/* CustomerDashboard - Exact Landing Page Design Match */
+/* Deep blacks, liquid glass, teal accents */
+
+/* Main Container - Matches Landing .container */
+.container {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    background-color: #030712;
+    color: white;
+    overflow-x: hidden;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Background Effects - Exact Landing page blobs */
+.backgroundEffects {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.glowBlob {
+    position: absolute;
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(20, 184, 166, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+    border-radius: 50%;
+    filter: blur(80px);
+    animation: float 20s infinite ease-in-out;
+}
+
+.blob1 {
+    top: -20%;
+    left: -10%;
+    animation-delay: 0s;
+}
+
+.blob2 {
+    bottom: -20%;
+    right: -10%;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+    animation-delay: -5s;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(30px, 50px);
+    }
+}
+
+/* Content wrapper */
+.contentWrapper {
+    position: relative;
+    z-index: 10;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Hero Section - Aligned with rest of page */
+.heroSection {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: 3rem 2rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto 2rem;
+}
+
+.glassCardHero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.displayHeading {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    background: linear-gradient(180deg, #ffffff 0%, #9ca3af 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.03em;
+}
+
+.glowText {
+    color: #2dd4bf;
+    -webkit-text-fill-color: #2dd4bf;
+    text-shadow: 0 0 20px rgba(45, 212, 191, 0.5);
+}
+
+.ctaButton {
+    background: linear-gradient(90deg, #14b8a6 0%, #059669 100%);
+    color: white;
+    padding: 1rem 3rem;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    box-shadow: 0 0 30px rgba(20, 184, 166, 0.3);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.ctaButton:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 50px rgba(20, 184, 166, 0.5);
+    background: linear-gradient(90deg, #2dd4bf 0%, #10b981 100%);
+}
+
+.emergencyButton {
+    background: linear-gradient(90deg, #ef4444 0%, #dc2626 100%);
+    box-shadow: 0 0 30px rgba(239, 68, 68, 0.3);
+}
+
+.emergencyButton:hover {
+    box-shadow: 0 0 50px rgba(239, 68, 68, 0.5);
+    background: linear-gradient(90deg, #f87171 0%, #ef4444 100%);
+}
+
+/* Overview Section - Matches Landing .overviewSection */
+.overviewSection {
+    position: relative;
+    z-index: 10;
+    padding: 4rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.overviewIntro {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.overviewTagline {
+    display: inline-block;
+    background: linear-gradient(135deg, rgba(45, 212, 191, 0.1), rgba(59, 130, 246, 0.1));
+    border: 1px solid rgba(45, 212, 191, 0.2);
+    padding: 0.5rem 1.25rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    color: #2dd4bf;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.05em;
+}
+
+.overviewTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.overviewSubtitle {
+    font-size: 1.1rem;
+    color: #9ca3af;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Benefits Grid - Matches Landing .benefitsGrid */
+.benefitsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.benefitCard {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 1.5rem;
+    border-radius: 16px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.benefitCard:hover {
+    border-color: rgba(45, 212, 191, 0.3);
+    background: rgba(255, 255, 255, 0.04);
+    transform: translateY(-4px);
+}
+
+.benefitIcon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    color: #2dd4bf;
+    background: rgba(45, 212, 191, 0.1);
+    border-radius: 12px;
+}
+
+.benefitTitle {
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.benefitDesc {
+    font-size: 0.85rem;
+    color: #6b7280;
+    line-height: 1.5;
+}
+
+/* Features Grid - Matches Landing .featuresGrid */
+.featuresGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 900px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+    position: relative;
+}
+
+.featureCard {
+    background: rgba(17, 24, 39, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2.5rem;
+    border-radius: 24px;
+    text-align: center;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 220px;
+    cursor: pointer;
+}
+
+.featureCard:hover {
+    transform: translateY(-10px);
+    border-color: rgba(45, 212, 191, 0.5);
+    box-shadow: 0 10px 40px rgba(45, 212, 191, 0.1);
+    background: rgba(17, 24, 39, 0.8);
+}
+
+.iconWrapper {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    color: #2dd4bf;
+}
+
+.featureTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.featureDesc {
+    color: #9ca3af;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* Trust Banner - Matches Landing .trustBanner */
+.trustBanner {
+    background: linear-gradient(135deg, rgba(45, 212, 191, 0.08), rgba(59, 130, 246, 0.08));
+    border: 1px solid rgba(45, 212, 191, 0.15);
+    border-radius: 20px;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+}
+
+.trustItem {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #d1d5db;
+    font-size: 0.95rem;
+}
+
+.trustIcon {
+    color: #2dd4bf;
+    flex-shrink: 0;
+}
+
+/* Vehicles Section Specific Styles */
+.sectionHeader {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.vehiclesGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.vehicleCard {
+    background: rgba(17, 24, 39, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 24px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: all 0.4s ease;
+}
+
+.vehicleCard:hover {
+    transform: translateY(-8px);
+    border-color: rgba(45, 212, 191, 0.5);
+    box-shadow: 0 10px 40px rgba(45, 212, 191, 0.1);
+    background: rgba(17, 24, 39, 0.8);
+}
+
+.vehicleHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.vehicleName {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+}
+
+.vehicleTypeBadge {
+    background: linear-gradient(135deg, rgba(45, 212, 191, 0.15), rgba(59, 130, 246, 0.15));
+    border: 1px solid rgba(45, 212, 191, 0.25);
+    color: #2dd4bf;
+    padding: 0.35rem 0.85rem;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.vehicleNumber {
+    color: #6b7280;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    font-family: 'Fira Code', 'Consolas', monospace;
+}
+
+.vehicleActions {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.actionBtn {
+    flex: 1;
+    background: linear-gradient(135deg, rgba(45, 212, 191, 0.2), rgba(59, 130, 246, 0.2));
+    border: 1px solid rgba(45, 212, 191, 0.3);
+    color: #2dd4bf;
+    padding: 0.75rem 1rem;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.actionBtn:hover {
+    background: linear-gradient(135deg, rgba(45, 212, 191, 0.3), rgba(59, 130, 246, 0.3));
+    box-shadow: 0 0 20px rgba(45, 212, 191, 0.2);
+    transform: translateY(-2px);
+}
+
+.actionBtnSecondary {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.actionBtnSecondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: none;
+}
+
+/* Add Vehicle Card */
+.addVehicleCard {
+    background: rgba(255, 255, 255, 0.02);
+    border: 2px dashed rgba(255, 255, 255, 0.15);
+    border-radius: 24px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.addVehicleCard:hover {
+    border-color: rgba(45, 212, 191, 0.4);
+    background: rgba(45, 212, 191, 0.05);
+    transform: translateY(-8px);
+}
+
+.addIcon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6b7280;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.addVehicleCard:hover .addIcon {
+    color: #2dd4bf;
+    background: rgba(45, 212, 191, 0.15);
+    transform: scale(1.1);
+}
+
+.addText {
+    color: #6b7280;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.addVehicleCard:hover .addText {
+    color: #2dd4bf;
+}
+
+/* Loading and Empty States */
+.loadingText,
+.emptyText {
+    color: #6b7280;
+    font-size: 1rem;
+    text-align: center;
+    padding: 2rem;
+    grid-column: 1 / -1;
+}
+
+.vehicleInfo {
+    color: #6b7280;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+}
+
+/* Notification Banner */
+.notificationBanner {
+    position: relative;
+    z-index: 20;
+    max-width: 1100px;
+    margin: 0 auto 2rem;
+    padding: 0 2rem;
+}
+
+.notificationContent {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(20, 184, 166, 0.15));
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    border-radius: 16px;
+    padding: 1rem 1.5rem;
+}
+
+.notificationIcon {
+    color: #10b981;
+    flex-shrink: 0;
+}
+
+.notificationText {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.notificationText strong {
+    color: #10b981;
+    font-size: 0.95rem;
+}
+
+.notificationText span {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.85rem;
+}
+
+.notificationAction {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: linear-gradient(90deg, #10b981, #059669);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.notificationAction:hover {
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+}
+
+.notificationClose {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: rgba(255, 255, 255, 0.5);
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.notificationClose:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .displayHeading {
+        font-size: 2.5rem;
+    }
+
+    .featuresGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .benefitsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .vehiclesGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .overviewTitle {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .glassCardHero {
+        padding: 2rem 1.5rem;
+    }
+
+    .displayHeading {
+        font-size: 1.75rem;
+    }
+
+    .ctaButton {
+        padding: 0.85rem 2rem;
+        font-size: 1rem;
+    }
+
+    .trustBanner {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}

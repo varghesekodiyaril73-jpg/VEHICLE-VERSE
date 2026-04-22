@@ -1,0 +1,162 @@
+Table: accounts_user
+id - BigAutoField
+password - CharField
+last_login - DateTimeField
+is_superuser - BooleanField
+username - CharField
+first_name - CharField
+last_name - CharField
+email - CharField
+is_staff - BooleanField
+is_active - BooleanField
+date_joined - DateTimeField
+user_role - CharField
+phone - CharField
+photo - FileField
+state - CharField
+district - CharField
+place - CharField
+address_line - TextField
+user_inactive - BooleanField
+created_at - DateTimeField
+Table: accounts_mechanicprofile
+id - BigAutoField
+user_id - OneToOneField
+proof - FileField
+approval_status - CharField
+min_service_fee - DecimalField
+min_breakdown_fee - DecimalField
+avg_rating - DecimalField
+is_available - BooleanField
+location_lat - DecimalField
+location_lng - DecimalField
+created_at - DateTimeField
+Table: accounts_adminprofile
+id - BigAutoField
+user_id - OneToOneField
+notes - TextField
+Table: vehicles_vehicle
+id - BigAutoField
+user_id - ForeignKey
+vehicle_name - CharField
+vehicle_type - CharField
+vehicle_brand - CharField
+vehicle_model - CharField
+registration_no - CharField
+vehicle_year - IntegerField
+created_at - DateTimeField
+Table: vehicles_address
+id - BigAutoField
+user_id - ForeignKey
+address_line - TextField
+address_landmark - CharField
+state - CharField
+district - CharField
+place - CharField
+pincode - CharField
+is_default - BooleanField
+created_at - DateTimeField
+Table: bookings_booking
+booking_id - AutoField
+customer_id - ForeignKey
+vehicle_id - ForeignKey
+mechanic_id - ForeignKey
+address_id - ForeignKey
+service_type - CharField
+service_details - TextField
+service_category - CharField
+is_urgent - BooleanField
+expected_completion - DateTimeField
+booking_status - CharField
+district - CharField
+place - CharField
+scheduled_date - DateField
+scheduled_time - TimeField
+cancellation_reason - TextField
+created_at - DateTimeField
+accepted_at - DateTimeField
+mechanic_arrival_time - DateTimeField
+completed_at - DateTimeField
+cancelled_at - DateTimeField
+cancelled_by_id - ForeignKey
+Table: bookings_payment
+id - BigAutoField
+booking_id - OneToOneField
+advance_amount - DecimalField
+advance_status - CharField
+advance_paid_at - DateTimeField
+final_amount - DecimalField
+final_status - CharField
+final_paid_at - DateTimeField
+customer_confirmed_amount - DecimalField
+customer_confirmed - BooleanField
+customer_confirmed_at - DateTimeField
+admin_commission_amount - DecimalField
+mechanic_amount - DecimalField
+payment_gateway_ref - CharField
+refund_amount - DecimalField
+refund_processing_fee - DecimalField
+refunded_at - DateTimeField
+created_at - DateTimeField
+Table: bookings_mechanicupdate
+id - BigAutoField
+booking_id - ForeignKey
+mechanic_id - ForeignKey
+update_status - CharField
+update_time - DateTimeField
+remarks - TextField
+Table: bookings_review
+id - BigAutoField
+booking_id - OneToOneField
+customer_id - ForeignKey
+mechanic_id - ForeignKey
+rating - IntegerField
+review_text - TextField
+created_at - DateTimeField
+Table: bookings_complaint
+id - BigAutoField
+booking_id - ForeignKey
+customer_id - ForeignKey
+complaint_type - CharField
+complaint_text - TextField
+status - CharField
+admin_response - TextField
+resolved_by_id - ForeignKey
+created_at - DateTimeField
+resolved_at - DateTimeField
+Table: bookings_chatmessage
+id - BigAutoField
+booking_id - ForeignKey
+sender_id - ForeignKey
+message - TextField
+is_read - BooleanField
+created_at - DateTimeField
+Table: support_feedback
+id - BigAutoField
+booking_id - ForeignKey
+customer_id - ForeignKey
+rating - SmallIntegerField
+feedback_details - TextField
+created_at - DateTimeField
+Table: support_complaint
+id - BigAutoField
+booking_id - ForeignKey
+raised_by_user_id - ForeignKey
+against_mechanic_id - ForeignKey
+against_customer_id - ForeignKey
+complaint_details - TextField
+complaint_status - CharField
+created_at - DateTimeField
+resolved_at - DateTimeField
+admin_notes - TextField
+Table: support_chatsession
+id - BigAutoField
+user_id - ForeignKey
+started_at - DateTimeField
+is_active - BooleanField
+Table: support_chatmessage
+id - BigAutoField
+session_id - ForeignKey
+sender - CharField
+message - TextField
+timestamp - DateTimeField

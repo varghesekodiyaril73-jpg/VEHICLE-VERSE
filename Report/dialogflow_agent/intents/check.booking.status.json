@@ -1,0 +1,33 @@
+{
+  "id": "296a7a0f-97d7-48db-9a84-fccff5ab0b55",
+  "name": "check.booking.status",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "check.booking.status",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": [
+            "To check your booking status, please visit your Dashboard 📋\n\nIn the 'My Bookings' section, you'll see all your:\n• Active bookings and their current status\n• Assigned mechanic details\n• Past completed services\n\nYou can track your mechanic's progress in real-time there!"
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

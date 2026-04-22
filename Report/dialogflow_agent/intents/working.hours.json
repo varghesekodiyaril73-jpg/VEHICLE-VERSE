@@ -1,0 +1,33 @@
+{
+  "id": "5290fa5c-38d3-4004-9237-9a2b04905e79",
+  "name": "working.hours",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "working.hours",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": [
+            "Here are our operating hours: ⏰\n\n**Regular Services:**\n• Monday - Saturday: 9:00 AM - 6:00 PM\n• Sunday: Closed (except emergencies)\n\n**Emergency Breakdown Services:**\n• Available 24/7, 365 days a year! 🚨\n\n**Customer Support:**\n• Phone: 9 AM - 6 PM (Mon-Sat)\n• Email: 24/7 (response within 24 hours)\n\nIndividual mechanics may have their own availability which you can check on their profiles."
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

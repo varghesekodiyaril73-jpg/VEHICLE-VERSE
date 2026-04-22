@@ -1,0 +1,22 @@
+{
+  "description": "VehicleVerse - Vehicle Service & Breakdown Management Chatbot Assistant",
+  "language": "en",
+  "shortDescription": "AI assistant for VehicleVerse platform",
+  "examples": "",
+  "linkToDocs": "",
+  "displayName": "VehicleVerse Assistant",
+  "disableInteractionLogs": false,
+  "disableStackdriverLogs": true,
+  "defaultTimezone": "Asia/Calcutta",
+  "isPrivate": true,
+  "mlMinConfidence": 0.3,
+  "supportedLanguages": [],
+  "enableOnePlatformApi": true,
+  "onePlatformApiVersion": "v2",
+  "secondaryKey": "",
+  "analyzeQueryTextSentiment": false,
+  "enabledKnowledgeBaseNames": [],
+  "knowledgeServiceConfidenceAdjustment": 0.0,
+  "dialogBuilderMode": false,
+  "baseActionPackagesUrl": ""
+}

@@ -1,0 +1,561 @@
+/* Admin Analytics - Page Specific Styles */
+
+/* ==================== */
+/* PAGE HEADER */
+/* ==================== */
+.pageHeader {
+    margin-bottom: 2rem;
+}
+
+.headerContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.breadcrumb {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.4);
+    margin-bottom: 0.5rem;
+}
+
+.pageTitle {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+}
+
+.refreshBtn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.65rem 1.25rem;
+    background: rgba(45, 212, 191, 0.1);
+    border: 1px solid rgba(45, 212, 191, 0.3);
+    border-radius: 10px;
+    color: #2dd4bf;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.refreshBtn:hover {
+    background: rgba(45, 212, 191, 0.2);
+    border-color: rgba(45, 212, 191, 0.5);
+}
+
+.refreshBtn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.spinning {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ==================== */
+/* LOADING & ERROR */
+/* ==================== */
+.loadingState {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    min-height: 400px;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1rem;
+}
+
+.spinner {
+    animation: spin 1s linear infinite;
+}
+
+.errorBanner {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.25rem;
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    border-radius: 12px;
+    color: #f87171;
+    margin-bottom: 1.5rem;
+}
+
+/* ==================== */
+/* ANALYTICS GRID */
+/* ==================== */
+.analyticsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+/* ==================== */
+/* CHART CARD */
+/* ==================== */
+.chartCard {
+    background: rgba(17, 24, 39, 0.6);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.chartCard:hover {
+    border-color: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.largeCard {
+    grid-column: span 2;
+}
+
+.wideCard {
+    grid-column: span 3;
+}
+
+.chartHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.25rem;
+}
+
+.chartTitleWrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.chartIcon {
+    color: #2dd4bf;
+}
+
+.chartTitle {
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    margin: 0;
+}
+
+.chartBadge {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* ==================== */
+/* BAR CHART */
+/* ==================== */
+.barChartContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.barItem {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.barLabel {
+    width: 100px;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-shrink: 0;
+}
+
+.barTrack {
+    flex: 1;
+    height: 24px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.barFill {
+    height: 100%;
+    border-radius: 6px;
+    transition: width 0.8s ease;
+}
+
+.barValue {
+    width: 40px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: white;
+    text-align: right;
+    flex-shrink: 0;
+}
+
+/* ==================== */
+/* PIE CHART */
+/* ==================== */
+.pieChartContainer {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.pieChart {
+    width: 120px;
+    height: 120px;
+    flex-shrink: 0;
+}
+
+.pieSvg {
+    width: 100%;
+    height: 100%;
+}
+
+.pieLegend {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.legendItem {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.legendDot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.legendLabel {
+    flex: 1;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.legendValue {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: white;
+}
+
+/* ==================== */
+/* STATUS GRID */
+/* ==================== */
+.statusGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+}
+
+.statusItem {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 10px;
+}
+
+.statusDot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.statusLabel {
+    flex: 1;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: capitalize;
+}
+
+.statusCount {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: white;
+}
+
+/* ==================== */
+/* LINE CHART */
+/* ==================== */
+.lineChartContainer {
+    position: relative;
+}
+
+.lineSvg {
+    width: 100%;
+    height: 200px;
+}
+
+.lineLabels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    padding: 0 10px;
+}
+
+.lineLabelItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.lineMonth {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.lineValue {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #22c55e;
+}
+
+/* ==================== */
+/* MECHANIC LIST */
+/* ==================== */
+.mechanicList {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.mechanicItem {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.mechanicItem:hover {
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.mechanicRank {
+    width: 28px;
+    height: 28px;
+    background: rgba(45, 212, 191, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #2dd4bf;
+    flex-shrink: 0;
+}
+
+.mechanicInfo {
+    flex: 1;
+    min-width: 0;
+}
+
+.mechanicName {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 0.35rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.mechanicProgress {
+    height: 6px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.mechanicBar {
+    height: 100%;
+    background: linear-gradient(90deg, #2dd4bf, #6366f1);
+    border-radius: 3px;
+}
+
+.mechanicStats {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.2rem;
+    flex-shrink: 0;
+}
+
+.mechanicJobs {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: white;
+}
+
+.mechanicRating {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* ==================== */
+/* GROWTH CHART */
+/* ==================== */
+.growthContainer {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.growthStats {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.growthCurrent {
+    display: flex;
+    flex-direction: column;
+}
+
+.growthNumber {
+    font-size: 2rem;
+    font-weight: 800;
+    color: white;
+    line-height: 1;
+}
+
+.growthLabel {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 0.25rem;
+}
+
+.growthChange {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.growthChange .positive {
+    color: #22c55e;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.growthChange .negative {
+    color: #ef4444;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.growthPeriod {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.growthBars {
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    gap: 0.5rem;
+    height: 100px;
+}
+
+.growthBar {
+    flex: 1;
+    background: linear-gradient(180deg, #6366f1, rgba(99, 102, 241, 0.3));
+    border-radius: 4px 4px 0 0;
+    position: relative;
+    min-height: 10px;
+}
+
+.growthBarLabel {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.65rem;
+    color: rgba(255, 255, 255, 0.4);
+    white-space: nowrap;
+}
+
+/* ==================== */
+/* EMPTY STATE */
+/* ==================== */
+.emptyState {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.9rem;
+}
+
+/* ==================== */
+/* RESPONSIVE */
+/* ==================== */
+@media (max-width: 1200px) {
+    .analyticsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .largeCard {
+        grid-column: span 2;
+    }
+
+    .wideCard {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .analyticsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .largeCard,
+    .wideCard {
+        grid-column: span 1;
+    }
+
+    .headerContent {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .pieChartContainer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .growthContainer {
+        flex-direction: column;
+    }
+
+    .growthBars {
+        height: 80px;
+    }
+}

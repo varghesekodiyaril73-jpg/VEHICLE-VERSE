@@ -1,0 +1,575 @@
+/* Landing Page Container */
+.container {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    background-color: #030712;
+    color: white;
+    overflow-x: hidden;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Background Effects */
+.backgroundEffects {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.glowBlob {
+    position: absolute;
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(20, 184, 166, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+    border-radius: 50%;
+    filter: blur(80px);
+    animation: float 20s infinite ease-in-out;
+}
+
+.blob1 {
+    top: -20%;
+    left: -10%;
+    animation-delay: 0s;
+}
+
+.blob2 {
+    bottom: -20%;
+    right: -10%;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+    animation-delay: -5s;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(30px, 50px);
+    }
+}
+
+/* Navbar - Centered properly */
+.navbar {
+    position: fixed;
+    top: 1.5rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem 1.5rem;
+    z-index: 50;
+    gap: 1rem;
+    box-sizing: border-box;
+
+    /* Glassmorphism */
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 100px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+.brand {
+    font-size: 1.25rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #2dd4bf 0%, #3b82f6 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.02em;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.navLinks {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.navLink {
+    color: #9ca3af;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.navLink:hover {
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.searchContainer {
+    position: relative;
+    flex: 1;
+    max-width: 200px;
+    min-width: 120px;
+    display: flex;
+    align-items: center;
+}
+
+.searchInput {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0.6rem 1rem 0.6rem 2.25rem;
+    border-radius: 50px;
+    color: white;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.searchInput:focus {
+    outline: none;
+    border-color: #2dd4bf;
+    box-shadow: 0 0 15px rgba(45, 212, 191, 0.2);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.searchIcon {
+    position: absolute;
+    left: 0.75rem;
+    color: #6b7280;
+    width: 14px;
+    height: 14px;
+}
+
+.authButtons {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.joinBtn {
+    background: linear-gradient(135deg, rgba(45, 212, 191, 0.2), rgba(59, 130, 246, 0.2));
+    border: 1px solid rgba(45, 212, 191, 0.3);
+    color: #2dd4bf;
+    padding: 0.5rem 1.25rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(4px);
+    white-space: nowrap;
+}
+
+.joinBtn:hover {
+    background: linear-gradient(135deg, rgba(45, 212, 191, 0.4), rgba(59, 130, 246, 0.4));
+    box-shadow: 0 0 20px rgba(45, 212, 191, 0.3);
+    transform: translateY(-1px);
+}
+
+.loginLink {
+    color: #fff;
+    font-weight: 500;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.loginLink:hover {
+    opacity: 1;
+}
+
+/* Hero Section */
+.heroSection {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 0 2rem;
+    padding-top: 100px;
+}
+
+.heroContent {
+    max-width: 1000px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.glassCardHero {
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 4rem 2rem;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+}
+
+.displayHeading {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    background: linear-gradient(180deg, #ffffff 0%, #9ca3af 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.03em;
+}
+
+.glowText {
+    color: #2dd4bf;
+    -webkit-text-fill-color: #2dd4bf;
+    text-shadow: 0 0 20px rgba(45, 212, 191, 0.5);
+}
+
+.ctaButton {
+    background: linear-gradient(90deg, #14b8a6 0%, #059669 100%);
+    color: white;
+    padding: 1rem 3rem;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    box-shadow: 0 0 30px rgba(20, 184, 166, 0.3);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    margin-top: 2rem;
+}
+
+.ctaButton:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 50px rgba(20, 184, 166, 0.5);
+    background: linear-gradient(90deg, #2dd4bf 0%, #10b981 100%);
+}
+
+/* Features Grid */
+.featuresGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 900px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+    z-index: 10;
+    position: relative;
+}
+
+.featureCard {
+    background: rgba(17, 24, 39, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2.5rem;
+    border-radius: 24px;
+    text-align: center;
+    backdrop-filter: blur(12px);
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 250px;
+}
+
+.featureCard:hover {
+    transform: translateY(-10px);
+    border-color: rgba(45, 212, 191, 0.5);
+    box-shadow: 0 10px 40px rgba(45, 212, 191, 0.1);
+    background: rgba(17, 24, 39, 0.8);
+}
+
+.iconWrapper {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    color: #2dd4bf;
+}
+
+.featureTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.featureDesc {
+    color: #9ca3af;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* ===================== */
+/* Overview Section */
+/* ===================== */
+
+.overviewSection {
+    position: relative;
+    z-index: 10;
+    padding: 4rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.overviewIntro {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.overviewTagline {
+    display: inline-block;
+    background: linear-gradient(135deg, rgba(45, 212, 191, 0.1), rgba(59, 130, 246, 0.1));
+    border: 1px solid rgba(45, 212, 191, 0.2);
+    padding: 0.5rem 1.25rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    color: #2dd4bf;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.05em;
+}
+
+.overviewTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.overviewSubtitle {
+    font-size: 1.1rem;
+    color: #9ca3af;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Benefits Grid */
+.benefitsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.benefitCard {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 1.5rem;
+    border-radius: 16px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.benefitCard:hover {
+    border-color: rgba(45, 212, 191, 0.3);
+    background: rgba(255, 255, 255, 0.04);
+    transform: translateY(-4px);
+}
+
+.benefitIcon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    color: #2dd4bf;
+    background: rgba(45, 212, 191, 0.1);
+    border-radius: 12px;
+}
+
+.benefitTitle {
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.benefitDesc {
+    font-size: 0.85rem;
+    color: #6b7280;
+    line-height: 1.5;
+}
+
+/* Trust Banner */
+.trustBanner {
+    background: linear-gradient(135deg, rgba(45, 212, 191, 0.08), rgba(59, 130, 246, 0.08));
+    border: 1px solid rgba(45, 212, 191, 0.15);
+    border-radius: 20px;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.trustItem {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #d1d5db;
+    font-size: 0.95rem;
+}
+
+.trustIcon {
+    color: #2dd4bf;
+    flex-shrink: 0;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .navLinks {
+        display: none;
+    }
+
+    .searchContainer {
+        max-width: 150px;
+    }
+
+    .displayHeading {
+        font-size: 2.5rem;
+    }
+
+    .featuresGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .benefitsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .overviewTitle {
+        font-size: 2rem;
+    }
+
+    .contactCards {
+        flex-direction: column;
+    }
+
+    .contactTitle {
+        font-size: 2rem;
+    }
+}
+
+/* ===================== */
+/* Contact Section */
+/* ===================== */
+
+.contactSection {
+    position: relative;
+    z-index: 10;
+    padding: 5rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.contactContainer {
+    text-align: center;
+}
+
+.contactTagline {
+    display: inline-block;
+    background: linear-gradient(135deg, rgba(45, 212, 191, 0.1), rgba(59, 130, 246, 0.1));
+    border: 1px solid rgba(45, 212, 191, 0.2);
+    padding: 0.5rem 1.25rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    color: #2dd4bf;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.05em;
+}
+
+.contactTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.contactSubtitle {
+    font-size: 1.1rem;
+    color: #9ca3af;
+    max-width: 500px;
+    margin: 0 auto 3rem;
+    line-height: 1.6;
+}
+
+.contactCards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.contactCard {
+    background: rgba(17, 24, 39, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2rem 2.5rem;
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+    transition: all 0.3s ease;
+    min-width: 280px;
+    text-decoration: none;
+}
+
+.contactCard:hover {
+    border-color: rgba(45, 212, 191, 0.4);
+    background: rgba(17, 24, 39, 0.8);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 40px rgba(45, 212, 191, 0.1);
+}
+
+.contactCardIcon {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    color: #2dd4bf;
+    background: rgba(45, 212, 191, 0.1);
+    border-radius: 16px;
+}
+
+.contactCardLabel {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin-bottom: 0.5rem;
+}
+
+.contactCardValue {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+}
+
+/* Footer */
+.footer {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    margin-top: 2rem;
+}
+
+.footerText {
+    color: #6b7280;
+    font-size: 0.9rem;
+}
+
+.footerBrand {
+    color: #2dd4bf;
+    font-weight: 600;
+}

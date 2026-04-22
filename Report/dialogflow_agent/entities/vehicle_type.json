@@ -1,0 +1,9 @@
+{
+    "id": "vehicle-type-001",
+    "name": "vehicle_type",
+    "isOverridable": true,
+    "isEnum": false,
+    "isRegexp": false,
+    "automatedExpansion": true,
+    "allowFuzzyExtraction": true
+}
